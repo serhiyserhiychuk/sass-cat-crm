@@ -1,135 +1,213 @@
-@charset "UTF-8";
-/***
-    The new CSS reset - version 1.11 (last updated 20.9.2023)
-    GitHub page: https://github.com/elad2412/the-new-css-reset
-***/
-/*
-    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
-    - The "symbol *" part is to solve Firefox SVG sprite bug
-    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
- */
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-  all: unset;
-  display: revert;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
 }
 
-/* Preferred box-sizing value */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+a {
+  text-decoration: none;
+  color: currentColor;
 }
 
-/* Fix mobile Safari increase font-size on landscape mode */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-      text-size-adjust: none;
+img,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-/* Reapply the pointer cursor for anchor tags */
-a,
-button {
-  cursor: revert;
-}
-
-/* Remove list styles (bullets/numbers) */
-ol,
-ul,
-menu {
-  list-style: none;
-}
-
-/* For images to not be able to exceed their container */
-img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
-}
-
-/* removes spacing between cells in tables */
-table {
-  border-collapse: collapse;
-}
-
-/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
 input,
-textarea {
-  -webkit-user-select: auto;
+button,
+textarea,
+select {
+  font: inherit;
+}
+.w-1 {
+  width: 8.3333333333%;
 }
 
-/* revert the 'white-space' property for textarea elements on Safari */
-textarea {
-  white-space: revert;
+.h-1 {
+  height: 8.3333333333%;
 }
 
-/* minimum style to allow to style meter element */
-meter {
-  -webkit-appearance: revert;
-  -moz-appearance: revert;
-       appearance: revert;
+.w-2 {
+  width: 16.6666666667%;
 }
 
-/* preformatted text - use only for this feature */
-:where(pre) {
-  all: revert;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+.h-2 {
+  height: 16.6666666667%;
 }
 
-/* reset default text opacity of input placeholder */
-::-webkit-input-placeholder {
-  color: unset;
-}
-::-moz-placeholder {
-  color: unset;
-}
-:-ms-input-placeholder {
-  color: unset;
-}
-::-ms-input-placeholder {
-  color: unset;
-}
-::placeholder {
-  color: unset;
+.w-3 {
+  width: 25%;
 }
 
-/* remove default dot (•) sign */
-::marker {
-  content: initial;
+.h-3 {
+  height: 25%;
 }
 
-/* fix the feature of 'hidden' attribute.
-   display:revert; revert to element instead of attribute */
-:where([hidden]) {
+.w-4 {
+  width: 33.3333333333%;
+}
+
+.h-4 {
+  height: 33.3333333333%;
+}
+
+.w-5 {
+  width: 41.6666666667%;
+}
+
+.h-5 {
+  height: 41.6666666667%;
+}
+
+.w-6 {
+  width: 50%;
+}
+
+.h-6 {
+  height: 50%;
+}
+
+.w-7 {
+  width: 58.3333333333%;
+}
+
+.h-7 {
+  height: 58.3333333333%;
+}
+
+.w-8 {
+  width: 66.6666666667%;
+}
+
+.h-8 {
+  height: 66.6666666667%;
+}
+
+.w-9 {
+  width: 75%;
+}
+
+.h-9 {
+  height: 75%;
+}
+
+.w-10 {
+  width: 83.3333333333%;
+}
+
+.h-10 {
+  height: 83.3333333333%;
+}
+
+.w-11 {
+  width: 91.6666666667%;
+}
+
+.h-11 {
+  height: 91.6666666667%;
+}
+
+.w-12 {
+  width: 100%;
+}
+
+.h-12 {
+  height: 100%;
+}
+
+.w-full {
+  width: 100vw;
+}
+
+.h-full {
+  height: 100vh;
+}
+
+.d-none {
   display: none;
 }
 
-/* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly.
-   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable=false])) {
-  -moz-user-modify: read-write;
-  -webkit-user-modify: read-write;
-  overflow-wrap: break-word;
-  -webkit-line-break: after-white-space;
-  -webkit-user-select: auto;
+.d-inline {
+  display: inline;
 }
 
-/* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable=true]) {
-  -webkit-user-drag: element;
+.d-block {
+  display: block;
 }
 
-/* Revert Modal native behavior */
-:where(dialog:modal) {
-  all: revert;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+}
+
+.d-inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.d-inline-grid {
+  display: inline-grid;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.p-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .page {
@@ -163,27 +241,19 @@ meter {
   color: #fafafb;
 }
 
-.badge {
-  display: inline-block;
-  min-width: 96px;
-  padding: 4px 8px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.07px;
-  text-align: center;
-  border-radius: 20px;
-  color: #ffffff;
-}
-
-.badge-completed {
-  background-color: #a461d8;
-}
-
-.badge-ended {
-  background-color: #fc5a5a;
-}
-
-.badge-active {
-  background-color: #82c43c;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+       -moz-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+       -moz-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    -webkit-transition-duration: 0.01ms !important;
+       -moz-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+  }
 }
