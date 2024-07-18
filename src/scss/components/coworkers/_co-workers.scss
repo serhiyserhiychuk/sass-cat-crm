@@ -1,7 +1,7 @@
-@use "../utils/placeholders";
-@use "../utils/variables" as var;
-@use "../utils/functions" as fn;
-@use "../utils/mixins" as mx;
+@use "../../utils/placeholders";
+@use "../../utils/variables" as var;
+@use "../../utils/functions" as fn;
+@use "../../utils/mixins" as mx;
 
 .co-workers {
   grid-area: co-workers;
